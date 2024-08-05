@@ -3,17 +3,22 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ModalComponent } from './components/modal/modal.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
